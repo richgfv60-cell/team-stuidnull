@@ -1,0 +1,41 @@
+/* 负责人：王嘉诚（组长）
+   设计令牌（Design Tokens）：全站共用的颜色、字体、圆角、间距。
+   各房间只能「使用」这里的变量，不要在这里改别人的东西。 */
+
+:root {
+  /* —— 颜色：奶白 + 粉色为主，禁止大面积黑色 —— */
+  --bg: #FBF8F2;          /* 页面底色：深夜柔和米白 */
+  --surface: #FFFFFF;     /* 卡片 */
+  --ink: #3A2A28;         /* 主文字（深奶茶棕，代替纯黑） */
+  --ink-soft: #8A7A76;    /* 次要文字 */
+  --pink: #F2B8B5;        /* 主粉色 */
+  --pink-soft: #FBE4E1;   /* 浅粉 */
+  --cream: #F4E5CA;       /* 奶油色 */
+  --dusk: #7D8CA8;        /* 暮色蓝（世界观的深夜部分） */
+  --line: rgba(58, 42, 40, .10);
+
+  /* —— 字体 —— */
+  --font: -apple-system, BlinkMacSystemFont, "PingFang SC", "Apple SD Gothic Neo",
+          "Noto Sans SC", "Noto Sans KR", "Microsoft YaHei", "Malgun Gothic", sans-serif;
+
+  /* —— 形状与间距 —— */
+  --radius: 24px;
+  --radius-sm: 14px;
+  --gap: 16px;
+  --gutter: 20px;
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); line-height: 1.6; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* —— 骨架阶段的空区块占位样式（区块做好后可删除 .slot 的占位文字） —— */
+.slot { min-height: 40vh; padding: var(--gutter); border-bottom: 1px dashed var(--line); display: grid; place-items: center; }
+.slot:empty::before { content: attr(data-slot) " · 准备中 · 준비 중"; color: var(--ink-soft); font-size: 14px; letter-spacing: .1em; }
+#nav.slot { min-height: 56px; position: sticky; top: 0; background: rgba(251, 248, 242, .85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); z-index: 10; }
+#footer.slot { min-height: 120px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

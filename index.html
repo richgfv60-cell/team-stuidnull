@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- 负责人：王嘉诚（组长） · 团队世界页面骨架。每个区块由一个 js 文件填充，这里只留位置 -->
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>奶油动物镇 · STUIDNULL</title>
+  <meta name="description" content="从动物园里消失的动物们居住的小镇 · 동물원에서 사라진 동물들이 사는 작은 마을">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <!-- 顶部导航：由 js/nav.js 填充 -->
+  <header id="nav" class="slot" data-slot="nav"></header>
+
+  <main>
+    <!-- 1. 首屏主视觉：由 js/hero.js 填充 -->
+    <section id="hero" class="slot" data-slot="hero"></section>
+
+    <!-- 2. 世界介绍：概念 · 世界规则 · 小镇日常 -->
+    <section id="world" class="slot" data-slot="world"></section>
+
+    <!-- 3. 角色阵容之门：由 js/lineup.js 填充 -->
+    <section id="lineup" class="slot" data-slot="lineup"></section>
+
+    <!-- 4. 团队介绍 -->
+    <section id="team" class="slot" data-slot="team"></section>
+  </main>
+
+  <!-- 5. 页脚 -->
+  <footer id="footer" class="slot" data-slot="footer"></footer>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/hero.js" defer></script>
+  <script src="js/lineup.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* 负责人：王嘉诚（组长） · 房间样式模板。复制到自己的文件夹后，只改下面两个变量和自己的样式 */
+:root {
+  --accent: var(--pink);      /* 我的角色主色 */
+  --room-bg: var(--bg);       /* 房间背景 */
+}
+body { background: var(--room-bg); }
